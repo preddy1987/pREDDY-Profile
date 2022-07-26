@@ -14,5 +14,36 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    /*margin-bottom: 60px;*/
+    color: #D76B00 !important;
+}
+
+header {
+    background-color: #202A44!important;
+    color: #D76B00!important;
+}
+a {
+    color: #D76B00 !important;
+}
+
+#header-logo{
+    height: 50px;
+}
+
+.flex-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+footer {
+    margin-top: auto;
+}
+
+#my-name {
+    font-size: 68px!important;
+}
+.introduction {
+    width: 445px;
 }

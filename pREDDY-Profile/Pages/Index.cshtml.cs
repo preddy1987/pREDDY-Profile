@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using pREDDY_Profile.Data;
 
 namespace pREDDY_Profile.Pages
 {

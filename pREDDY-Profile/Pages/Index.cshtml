@@ -1,10 +1,26 @@
 ﻿@page
 @model IndexModel
+@using pREDDY_Profile.Data;
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Patrick Reddy's Profile Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-left mx-5">
+    <h2><img src="assets/images/logo-white-bg.png" alt="Patrick Reddy"/></h2>
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="introduction">
+            <div class="col text-center">
+                <p>Hi, my name is</p>
+                <h1 id="my-name">Patrick Reddy</h1>
+            </div>
+            <div class="col text-left">
+                <p>I am a full stack software engineer specializing in building exceptional digital experiences. 
+                    Currently, I am focused on creating robust, data-driven software solutions to enhance electronic health records at 
+                    <a class="" target="_blank" rel="noreferrer noopener" href="@AppConsts.ExternalURLs.Intellicure">Intellicure</a>.
+                </p>
+            </div>
+        </div>
+    </div>
 </div>

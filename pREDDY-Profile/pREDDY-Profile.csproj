@@ -7,4 +7,8 @@
     <RootNamespace>pREDDY_Profile</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Assets\images\" />
+  </ItemGroup>
+
 </Project>

@@ -5,32 +5,56 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - pREDDY_Profile</title>
+@*    <link rel="stylesheet" href="~/css/custom.min.css" />
+    <link rel="stylesheet" href="~/lib/markitup/skins/markitup/style.css" />
+    <link rel="stylesheet" href="~/lib/markitup/sets/html/style.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="~/lib/jqueryui/jquery-ui.css" />
+    <link rel="stylesheet" href="~/lib/select2/css/select2.css" />
+    <link rel="stylesheet" href="~/css/select2-bootstrap4.css" />
+    <link rel="stylesheet" href="~/lib/quill/quill.snow.min.css" />
+    <link rel="stylesheet" href="~/lib/hopscotch/css/hopscotch.css" />
+    <link rel="stylesheet" href="~/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" />
+    <link rel="stylesheet" href="~/lib/fullcalendar/main.min.css" />
+    <link rel="stylesheet" href="~/lib/fullcalendar-scheduler/main.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap-drawer/css/bootstrap-drawer.min.css" />
+    <link rel="stylesheet" href="~/lib/jquery-contextmenu/jquery.contextMenu.min.css" />
+    <link rel="stylesheet" href="~/lib/jsTree/dist/themes/default/style.min.css" />
+    <link rel="stylesheet" href="~/lib/Chart.js/Chart.min.css" />
+    <link rel="stylesheet" href="~/lib/PrintArea/PrintArea.min.css" />
+    <link rel="stylesheet" href="~/lib/TableExport/css/tableexport.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap-toggle/css/bootstrap2-toggle.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />*@
+    @*<link rel="stylesheet" href="~/lib/font-awesome/css/all.css" />*@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/pREDDY_Profile.styles.css" asp-append-version="true" />
 </head>
 <body>
+    <div class="flex-wrapper">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">pREDDY_Profile</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow">
+            <div class="container d-flex">
+                <div class="mr-auto">
+                    <a class="navbar-brand" asp-area="" asp-page="/Index"><img id="header-logo" src="assets/images/header-logo-navy-bg.png" alt="pREDDY_Profile"></img></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                    <ul class="navbar-nav flex-grow-1 flex-row-reverse">
+                        <li class="nav-item order-3">
+                            <a class="nav-link" asp-area="" asp-page="/Index"><i class="fa-solid fa-house"></i> Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                        <li class="nav-item order-2">
+                            <a class="nav-link" target="_blank" rel="noreferrer noopener" href="@AppConsts.ExternalURLs.LinkedIn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" target="_blank" rel="noreferrer noopener" href="@AppConsts.ExternalURLs.LinkedIn">LinkedIn</a>
+                        <li class="nav-item order-1">
+                            <a class="nav-link" target="_blank" rel="noreferrer noopener" href="@AppConsts.ExternalURLs.GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" target="_blank" rel="noreferrer noopener" href="@AppConsts.ExternalURLs.GitHub">GitHub</a>
+                        <li class="nav-item order-0">
+                            <a class="nav-link" target="_blank" rel="noreferrer noopener" href="mailto:@AppConsts.EmailAddresses.GMail?subject=From Website"><i class="fa-solid fa-envelope"></i> Email Me</a>
                         </li>
                     </ul>
                 </div>
@@ -45,13 +69,108 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - pREDDY_Profile - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2022 - pREDDY - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
+    </div>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+@*    <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>*@
+
+    <script src="https://kit.fontawesome.com/b76597ead5.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" asp-add-nonce="true"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/jquery/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" asp-add-nonce="true"
+            integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA=="
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/jquery-validation/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js" asp-add-nonce="true"
+            integrity="sha512-o6XqxgrUsKmchwy9G5VRNWSSxTS4Urr4loO6/0hYdpWmFUfHqGzawGxeQGMDqYzxjY9sbktPbNlkIQJWagVZQg=="
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js" asp-add-nonce="true"
+            integrity="sha512-JGKswjfABjJjtSUnz+y8XUBjBlwM1UHNlm2ZJN7A2a9HUYT3Mskq+SacsI35k4lok+/zetSxhZjKS3r3tfAnQg=="
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/jqueryui/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.5/umd/popper.min.js" asp-add-nonce="true"
+            integrity="sha512-8cU710tp3iH9RniUh6fq5zJsGnjLzOWLWdZqBMLtqaoZUA6AWIE34lwMB3ipUNiTBP5jEZKY95SfbNnQ8cCKvA=="
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/popper/umd/popper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js" asp-add-nonce="true"
+            integrity="sha512-dGM81hdEjiW5IomkknOx3fIfwij3c7xwh6TcrbumlkHJtO81OKNjLISJaPEhCgVxM6+0uGJ7KRmI2YJFn0AmHQ=="
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/moment.js/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone.min.js" asp-add-nonce="true"
+            integrity="sha512-qgYAx88WhogYFeIK6/7VKi5OjuYN7i0Q0vWR5jsU2v/dEGbo60LeHEgggXdivq8YRX7y3SDP9OpUqWu8fEyGsg==" 
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/moment-timezone/moment-timezone.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.js" asp-add-nonce="true"
+            integrity="sha512-oqSECbLRRAy3Sq2tJ0RmzbqXHprFS+n7WapvpI1t0V7CtV4vghscIQ8MYoQo6tp4MrJmih4SlOaYuCkPRi3j6A==" 
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/moment-timezone/moment-timezone-with-data.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.markitup/1.1.15/jquery.markitup.js" asp-add-nonce="true"
+            integrity="sha512-ZJfDIYAxgtssZCdsMcRLQ3RwuPH411SPFjRe3k2SyOzSKToNR6plv0Z2Hpa1R57pmpnXec59mUwrXvM+LBo2Pw==" 
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/markitup/jquery.markitup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.markitup/1.1.15/sets/default/set.js" asp-add-nonce="true"
+            integrity="sha512-iNetgmRSb9FB76/6Tuw+BCyduh+++W1z6PWNu0we/O6IOqwYQ7P0Gt2KtRiwjwuJGXtB4/rrxwrhGZJclYdh5w==" 
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/markitup/sets/html/set.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.js" asp-add-nonce="true"
+            integrity="sha512-/1h344Ogu39f2lMl2yIJn3mPjySuB0+m3EzDvFSWlxo6HaJO/3jdzGOy8V6ZgdkTkddKH+ZWma1mqOQZHmjo1w=="
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/bootstrap/js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.js" asp-add-nonce="true"
+            integrity="sha512-tvs4l2C3VPcCHzUU1KGG+jWWTO7H0stvk1jwn6pr4B1uimcL/2api3rnmkMhVQ6DglgxLcqyLSDS1IF5eyeTRg==" 
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/select2/js/select2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" asp-add-nonce="true"
+            integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" 
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/jquery-mask/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hopscotch/0.3.1/js/hopscotch.min.js" asp-add-nonce="true"
+            integrity="sha512-V7R6vinqZBgmF5TdaAkLaaB9iWYqhrRhth3tw9ibZnnsJ8ATLVXdUn6VWXspd12NxaaXJHhUwVZPCgndxeKX3g=="
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/hopscotch/js/hopscotch.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/js/tempusdominus-bootstrap-4.js" asp-add-nonce="true"
+            integrity="sha512-1+GNKHQ9yw2vSBLvpsquZDJh0ktonnPGPkYBNd7Xh85jnvibX7MQaVLQEeTQBhcSSFLYu6DAefDsn/KFQo/YNQ=="
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/tempusdominus/js/tempusdominus-bootstrap-4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.js" asp-add-nonce="true"
+            integrity="sha512-DJw15+xxGmXB1/c6pvu2eRoVCGo5s6rdeswkFS4HLFfzNQSc6V71jk6t+eMYzlyakoLTwBrKnyhVc7SCDZOK4Q=="
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/js-cookie/js.cookie.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.7/quill.js" asp-add-nonce="true"
+            integrity="sha512-fKCmF3NjF4jFIMa8v37g880lz9dm9mS15c6q6kcYgEEqtya3mHwiXKKGvAUAvPgFatZ4uAV9Z21/ARJkoePZmA=="
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/quill/quill.js"></script>  
+    <script src="~/js/site.min.js" asp-append-version="true" asp-add-nonce="true" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tooltip.js/1.3.3/tooltip.min.js" asp-add-nonce="true"
+            integrity="sha512-ql/3IzUzLuFdkLA2w9moj4ssGDZuvRTjRDeSEX+MnjrzjRpy1COnClBDprSR0KPWbpyxVMvjiLHgv0KFa+H8vw=="
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/tooltip.js/umd/tooltip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" asp-add-nonce="true"
+            integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg=="
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/Chart.js/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/bootstrap/main.min.js" asp-add-nonce="true"
+            integrity="sha512-uuua5cS/LUZHEtZiY2s+SRn0h46TbLZjcaf7fztYqdzM+a0t81kw05yLZSjwF3l3lonm53GZ45rSSzAWAwA5Sg=="
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/fullcalendar/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar-scheduler/4.2.0/resource-common/main.min.js" asp-add-nonce="true"
+            integrity="sha512-j35pe/8wgVtNavjqhe3tRC9+wvt2NXjhwM7T+k7m9gZYZk//tBcvqc8fWdCBAcID5s8hrco9qC5ewJcCll3jWg=="
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/fullcalendar-scheduler/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-drawer/1.0.6/js/drawer.min.js" asp-add-nonce="true"
+            integrity="sha512-Wh3lP9w7lSb/YxUiRVSCp3vB6K4mheETB2oxfSpPBFsqjUkChxZiRZ2jii+2gJ+rP1lDMy5dEiOvM4fkEN4WGA=="
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/bootstrap-drawer/js/drawer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.9.2/jquery.contextMenu.min.js" asp-add-nonce="true"
+            integrity="sha512-kvg/Lknti7OoAw0GqMBP8B+7cGHvp4M9O9V6nAYG91FZVDMW3Xkkq5qrdMhrXiawahqU7IZ5CNsY/wWy1PpGTQ=="
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/jquery-contextmenu/jquery.contextMenu.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PrintArea/2.4.1/jquery.PrintArea.min.js" asp-add-nonce="true"
+            integrity="sha512-mPA/BA22QPGx1iuaMpZdSsXVsHUTr9OisxHDtdsYj73eDGWG2bTSTLTUOb4TG40JvUyjoTcLF+2srfRchwbodg=="
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/PrintArea/jquery.PrintArea.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" asp-add-nonce="true"
+            integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw=="
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/FileSaver.js/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/TableExport/5.2.0/js/tableexport.min.js" asp-add-nonce="true"
+            integrity="sha512-XmZS54be9JGMZjf+zk61JZaLZyjTRgs41JLSmx5QlIP5F+sSGIyzD2eJyxD4K6kGGr7AsVhaitzZ2WTfzpsQzg=="
+            crossorigin="anonymous" type="text/javascript"  asp-fallback-src="~/lib/TableExport/js/tableexport.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.5/JsBarcode.all.min.js" asp-add-nonce="true"
+            integrity="sha512-QEAheCz+x/VkKtxeGoDq6nsGyzTx/0LMINTgQjqZ0h3+NjP+bCsPYz3hn0HnBkGmkIFSr7QcEZT+KyEM7lbLPQ=="
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/jsbarcode/JsBarcode.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.5/barcodes/JsBarcode.code39.min.js" asp-add-nonce="true"
+            integrity="sha512-Z4zu7irW9osSDN90/Xql+iRkQBtB64OwBIhqeCzH9mSFwjYvZWZV1OoNvgUmN9FThDLbByllpspc0yJrXfErXA==" 
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/jsbarcode/barcodes/JsBarcode.code39.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/jstree.min.js" asp-add-nonce="true"
+            integrity="sha512-TGClBy3S4qrWJtzel4qMtXsmM0Y9cap6QwRm3zo1MpVjvIURa90YYz5weeh6nvDGKZf/x3hrl1zzHW/uygftKg=="
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/jsTree/dist/jstree.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-toggle/2.2.2/js/bootstrap2-toggle.min.js" asp-add-nonce="true"
+            integrity="sha512-fTqvOEiwNdI+7jeDq4MigqUSc9B2mlziMZfeZO1rFkqysafJPrdPob5ARLgBHoaAXrkYgA7kHJ1E2WAqP/pdzg=="
+            crossorigin="anonymous" type="text/javascript" asp-fallback-src="~/lib/bootstrap-toggle/js/bootstrap2-toggle.min.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
